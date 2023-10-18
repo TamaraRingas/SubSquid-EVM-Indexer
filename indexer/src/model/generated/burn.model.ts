@@ -1,4 +1,4 @@
-import {Entity as Entity_, Column as Column_, PrimaryColumn as PrimaryColumn_, Index as Index_} from "typeorm"
+import {Entity as Entity_, Column as Column_, PrimaryColumn as PrimaryColumn_, Index as Index_, Entity} from "typeorm"
 import * as marshal from "./marshal"
 
 @Entity_()
@@ -22,4 +22,17 @@ export class Burn {
 
     @Column_("text", {nullable: false})
     txHash!: string
+}
+
+@Entity_()
+export class NewBlock {
+    constructor(props?: Partial<Number>) {
+        Object.assign(this, props)
+    }
+
+    @PrimaryColumn_()
+    id!: string
+
+    @Column_("text", {nullable:false})
+    header!:string
 }
