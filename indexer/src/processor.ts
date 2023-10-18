@@ -32,7 +32,7 @@ export const processor = new EvmBatchProcessor()
         },
     })
     .setBlockRange({
-        from: 6_000_000,
+        from: 15537393,
     })
     .addTransaction({
         to: ['0x0000000000000000000000000000000000000000'],
